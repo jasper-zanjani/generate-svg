@@ -1,0 +1,19 @@
+[aave]
+class = "aave"
+color = "9391F7"
+
+[eigen]
+class = "eigen"
+color = "1A0C6D"
+
+[eth]
+class = "eth"
+color = "black"
+
+[op]
+class = "op"
+color = "FF0420"
+
+[uni]
+class = "uni"
+color = "FF007A"

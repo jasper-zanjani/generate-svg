@@ -1,0 +1,102 @@
+<svg viewBox="-10 0 190 100"  xmlns="http://www.w3.org/2000/svg">
+
+<defs><style> 
+path { fill: none; } 
+text { font-family: "sans-serif"; font-size: 0.2em; } 
+{% for token in tokens %}g.{{ token.class }} { circle { fill: #{{ token.color }}; } path { stroke: #{{ token.color }}; } } 
+{% endfor  %}
+<!--
+    g.eigen {
+        circle { fill: #1A0C6D; }
+        path { stroke: #1A0C6D; }
+    }
+
+    g.uni {
+        circle { fill: #FF007A; }
+        path { stroke: #FF007A; }
+    }
+
+    g.aave {
+        circle { fill: #9391F7; }
+        path { stroke: #9391F7; }
+    }
+
+    g.op {
+        circle { fill: #FF0420; }
+        path { stroke: #FF0420; }
+    }
+
+    g.eth {
+        circle { fill: black; }
+        path { stroke: black; }
+    }
+
+-->
+</style></defs>
+
+<text   x="2" y="3" >12/7</text>
+<text  x="42" y="3" >12/8</text>
+<text  x="82" y="3"> 12/9 1200</text>
+<text x="122" y="3"> 12/10</text>
+<text x="162" y="3"> 12/11</text>
+
+
+<!-- Date lines -->
+<path fill="none" stroke="black" stroke-dasharray="2,2" stroke-width="0.2" d="M0,0 L0,200"/>
+<path fill="none" stroke="black" stroke-dasharray="2,2" stroke-width="0.2" d="M40,0 L40,200"/>
+<path fill="none" stroke="black" stroke-dasharray="2,2" stroke-width="0.2" d="M80,0 L80,200"/>
+<path fill="none" stroke="black" stroke-dasharray="2,2" stroke-width="0.2" d="M120,0 L120,200"/>
+<path fill="none" stroke="black" stroke-dasharray="2,2" stroke-width="0.2" d="M160,0 L160,200"/>
+
+<!-- Date header line -->
+<path fill="none" stroke="black" stroke-width="0.2" d="M-10,5 L250,5"/>
+
+<!-- 100% line -->
+<path fill="none" stroke="black" stroke-dasharray="1,2" stroke-width="0.2" d="M-1,30 L250,30"/>
+<text x="-10" y="31">100%</text>
+
+<!--
+
+100% : 30
+
+For every curve, n and m are defined by order
+Color c is defined by token
+
+<path d="M2,30 Q40,n 80,n, Q120,n 160,m" />
+
+
+Eigen: #1A0C6D
+AAVE : #9391F7
+UNI: #FF007A
+-->
+
+<g class="eigen">
+    <path  d="M0,30 Q40,60 80,60 Q120,60 160,30" />
+    <text x="81" y="64" >EIGEN -6.2% </text>
+</g>
+
+<g class="aave">
+    <path d="M0,30 Q40,70 80,70 Q120,70 160,40" />
+    <text x="81" y="74" >AAVE -11.9%</text>
+</g>
+
+<g class="eth">
+    <path  stroke="black" d="M0,30 Q40,50 80,50 Q120,50 160,20" />
+    <text x="81" y="54" >ETH -12.2%</text>
+</g>
+
+<g class="uni">
+    <path d="M0,30 Q40,80 80,80 Q120,80 160,60" />
+    <text x="81" y="84" >UNI -8.5%</text>
+</g>
+
+<g class="op">
+    <path d="M0,30 Q30,90 120,95 Q140,95 160,70" />
+    <text x="81" y="95"> OP -14.0%</text>
+    <text x="121" y="98"> -18.0%</text>
+</g>
+
+<circle fill="black" cx="0" cy="30" r="1"/>
+
+</svg>
+
